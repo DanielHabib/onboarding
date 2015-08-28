@@ -1,4 +1,3 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
 import React, { PropTypes } from 'react';
 import styles from './App.css';
@@ -7,6 +6,8 @@ import withStyles from '../../decorators/withStyles';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
+import TreeNode from '../TreeNode';
+import TeamNode from '../TeamNode';
 
 @withContext
 @withStyles(styles)
@@ -20,10 +21,13 @@ class App {
   render() {
     return !this.props.error ? (
       <div>
-        <Header />
-        {this.props.children}
-        <Feedback />
-        <Footer />
+        <TreeNode />
+        <div className="TeamDiv">
+          <TeamNode />
+          <TeamNode />
+          <TeamNode />
+          <TeamNode />
+        </div>
       </div>
     ) : this.props.children;
   }

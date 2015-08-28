@@ -1,0 +1,31 @@
+@import '../variables.css';
+
+.TeamNode-Buffer {
+
+  padding: 25px;
+  /*color: #E5434E;*/
+  width: 200px;
+  margin: 0 auto;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+
+}
+.TeamNode {
+  background: #E5434E;
+  border-radius: 50%;
+  /*color: #E5434E;*/
+  width: 200px;
+  margin: 0 auto;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+}
+.TeamNode-Text {
+  color: #3381AA;
+  background: #F3BE23;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -166,3 +166,13 @@ textarea {
     page-break-after: avoid;
   }
 }
+
+  /*
+   * Custom CSS
+   *
+   */
+
+   .TeamDiv{
+
+    text-align:center;
+   }
