@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import styles from './TeamNode.css';
+import styles from './MemberNode.css';
 import withViewport from '../../decorators/withViewport';
 import withStyles from '../../decorators/withStyles';
 import Link from '../../utils/Link';
@@ -7,7 +7,7 @@ import Link from '../../utils/Link';
 // Why do I need decorators?
 @withViewport
 @withStyles(styles)
-class TeamNode {
+class MemberNode {
 
   // What do these do?
   static propTypes = {
@@ -21,10 +21,10 @@ class TeamNode {
     let { width, height } = this.props.viewport;
 
     return (
-      <div className="TeamNode-Buffer">
-          <div className="TeamNode">
-            <p className="TeamNode-Text">
-              Team
+      <div className="MemberNode-Buffer">
+          <div className="MemberNode">
+            <p className="MemberNode-Text">
+              Employee 
             </p>
           </div>
       </div>
@@ -33,4 +33,4 @@ class TeamNode {
 
 }
 
-export default TeamNode;
+export default MemberNode;

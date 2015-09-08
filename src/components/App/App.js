@@ -8,6 +8,7 @@ import Feedback from '../Feedback';
 import Footer from '../Footer';
 import TreeNode from '../TreeNode';
 import TeamNode from '../TeamNode';
+import MemberNode from '../MemberNode';
 
 @withContext
 @withStyles(styles)
@@ -20,13 +21,23 @@ class App {
 
   render() {
     return !this.props.error ? (
-      <div>
+      <div id="FullScreen">
         <TreeNode />
         <div className="TeamDiv">
           <TeamNode />
           <TeamNode />
           <TeamNode />
           <TeamNode />
+        </div>
+        <div className="MemberDiv">
+          <MemberNode />
+          <MemberNode />
+          <MemberNode />
+          <MemberNode />
+          <MemberNode />
+          <MemberNode />
+          <MemberNode />
+          <MemberNode />
         </div>
       </div>
     ) : this.props.children;

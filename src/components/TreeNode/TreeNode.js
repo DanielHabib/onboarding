@@ -23,7 +23,7 @@ class TreeNode {
     return (
       <div className="TreeNode">
         <p className="NodeText">
-          Ferrari
+          Organization
         </p>
       </div>
     );
