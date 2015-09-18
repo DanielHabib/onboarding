@@ -17,16 +17,32 @@ class TeamNode {
     }).isRequired
   };
 
+    constructor() {
+        // super();
+        this.state = {
+            name: "TEAMNAME",
+            desc: "This is a Description"
+        };
+    };
+  display() {
+    console.log("Test");
+  }
   render() {
     let { width, height } = this.props.viewport;
-
+    var name = this.state.name;
+    var desc = this.state.desc;
     return (
       <div className="TeamNode-Buffer">
-          <div className="TeamNode">
-            <p className="TeamNode-Text">
-              Team
-            </p>
-          </div>
+        <div className="TeamNode" onClick={this.display.bind(this)}>
+          <p className="TeamNode-Name">
+            {name}
+          </p>
+        </div>
+        <div className="TeamNode-Description">
+          <p>
+            {desc}
+          </p>
+        </div>
       </div>
     );
   }
