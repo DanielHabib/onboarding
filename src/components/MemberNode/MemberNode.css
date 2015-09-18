@@ -7,17 +7,16 @@
   width: 200px;
   margin: 0 auto;
   height: 200px;
-  position: relative;
+  position: absolute;
   display: inline-block;
+  z-index: 10;
 
 }
 .MemberNode {
-  background: #E5434E;
-  border-radius: 50%;
-  /*color: #E5434E;*/
+  background: gray;
   width: 200px;
   margin: 0 auto;
-  height: 200px;
+  height: 80px;
   position: relative;
   display: inline-block;
 }

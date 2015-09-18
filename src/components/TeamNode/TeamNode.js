@@ -3,6 +3,7 @@ import styles from './TeamNode.css';
 import withViewport from '../../decorators/withViewport';
 import withStyles from '../../decorators/withStyles';
 import Link from '../../utils/Link';
+import $ from 'jquery';
 
 // Why do I need decorators?
 @withViewport
@@ -19,32 +20,47 @@ class TeamNode {
 
     constructor() {
         // super();
+
         this.state = {
             name: "TEAMNAME",
-            desc: "This is a Description"
+            desc: "This is a Description",
+            desc_visable: true
         };
     };
   display() {
-    console.log("Test");
+    var element = document.getElementById("CenterNodeDescription");
+
+    console.log("enter");
+    console.log(this.state.desc_visable);
+    if (this.state.desc_visable) {
+      element.style.display = 'none';
+      this.state.desc_visable = false;
+    }else{
+      element.style.display = 'inline-block';
+      this.state.desc_visable = true;
+    }
+
+
   }
   render() {
+
     let { width, height } = this.props.viewport;
-    var name = this.state.name;
-    var desc = this.state.desc;
-    return (
-      <div className="TeamNode-Buffer">
+    var name = this.props.name;
+    var desc = this.props.desc;
+    return !this.props.error ? (
+      <div className="TeamNode-Buffer" id="CenterNode">
         <div className="TeamNode" onClick={this.display.bind(this)}>
-          <p className="TeamNode-Name">
+          <p className="TeamNode-Name" >
             {name}
           </p>
         </div>
-        <div className="TeamNode-Description">
+        <div className="TeamNode-Description" id="CenterNodeDescription">
           <p>
             {desc}
           </p>
         </div>
       </div>
-    );
+    ): this.props.children;
   }
 
 }

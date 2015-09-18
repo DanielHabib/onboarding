@@ -3,7 +3,7 @@ import styles from './MemberNode.css';
 import withViewport from '../../decorators/withViewport';
 import withStyles from '../../decorators/withStyles';
 import Link from '../../utils/Link';
-
+import PubSub from 'pubsub-js';
 // Why do I need decorators?
 @withViewport
 @withStyles(styles)
@@ -17,14 +17,21 @@ class MemberNode {
     }).isRequired
   };
 
+  clicked () {
+    console.log("pushed");
+    PubSub.publishSync( 'text_pushed', 'hello world!' );
+
+  }
+
+
   render() {
     let { width, height } = this.props.viewport;
 
     return (
-      <div className="MemberNode-Buffer">
+      <div className="MemberNode-Buffer" onClick={this.clicked.bind(this)}>
           <div className="MemberNode">
             <p className="MemberNode-Text">
-              Employee 
+              Back to Top
             </p>
           </div>
       </div>

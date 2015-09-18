@@ -15,8 +15,10 @@
    .ChildNode{
   padding: 25px;
   /*color: #E5434E;*/
-  width: 100%;
+  max-width: 50%;
+  min-width: 20%;
   height: 100%;
+  
   position: relative;
   display:table-cell;
   vertical-align:middle;
@@ -26,6 +28,7 @@
   border-style: solid;
   border-width: 1px;
    }
+
    .MemberDiv{
 
     text-align:center;
@@ -37,6 +40,7 @@
     width: 100%;
     display:table;
    }
+
    #app{
     position: absolute;
     top: 0;
