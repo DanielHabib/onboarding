@@ -13,26 +13,24 @@
     text-align:center;
    }
    .ChildNode{
-  padding: 25px;
-  /*color: #E5434E;*/
-  max-width: 50%;
-  min-width: 20%;
-  height: 100%;
-  
-  position: relative;
-  display:table-cell;
-  vertical-align:middle;
-  text-align:center;
-  background: red;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
+      padding: 25px;
+      background: #E5434E;
+      max-width: 50%;
+      min-width: 20%;
+      height: 100%;
+      border-radius: 50%;
+
+      position: relative;
+      display:table-cell;
+      vertical-align:middle;
+      text-align:center;
+
    }
 
    .MemberDiv{
-
     text-align:center;
    }
+
    #FullScreen{
     background: #BDFCFC;
     position: relative;
